@@ -33,18 +33,12 @@ cd packet-tracer-guide
 npm install
 ```
 
-3. Opprett en .env fil i rotkatalogen (valgfritt)
-```bash
-MONGODB_URI=mongodb://localhost:27017/packet-tracer-guide
-PORT=3000
-```
-
-4. Bygg CSS
+3. Bygg CSS
 ```bash
 npm run build:css
 ```
 
-5. Start serveren
+4. Start serveren
 ```bash
 npm run dev
 ```
@@ -61,7 +55,6 @@ Besøk `http://localhost:3000` i nettleseren din for å se nettsiden.
 - **Backend**
   - Node.js
   - Express.js
-  - MongoDB
 
 ## 📁 Prosjektstruktur
 
