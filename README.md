@@ -1,31 +1,131 @@
-# Cisco Packet Tracer Guide  
+# Packet Tracer Guide
 
-Denne nettsiden gir en grundig innføring i hvordan man bruker Cisco Packet Tracer. Den dekker blant annet:  
+En omfattende guide for å lære nettverkskonfigurasjon med Cisco Packet Tracer. Dette prosjektet tilbyr steg-for-steg veiledninger for å sette opp ulike nettverksscenarier.
 
-- Hvordan programmet fungerer  
-- Hvordan man setter opp et enkelt LAN  
-- Oppsett av DNS- og DHCP-server  
-- En ordliste med relevante begreper  
-- Bruk av IoT-enheter i Cisco Packet Tracer  
+## 📋 Innhold
 
-## 🚀 Teknologier brukt  
-- **Node.js + Express** (Backend)  
-- **EJS + TailwindCSS** (Frontend)  
-- **GitHub Projects** for prosjektstyring  
+- LAN-oppsett
+- DNS-server konfigurasjon
+- DHCP-server konfigurasjon
+- IoT-nettverk oppsett
+- Program gjennomgang
+- Ordliste med nettverksterminologi
 
-## 📂 Prosjektstruktur  
+## 🚀 Kom i gang
+
+### Forutsetninger
+
+- Node.js (v14 eller nyere)
+- npm (Node Package Manager)
+- MongoDB (v4.4 eller nyere)
+- Git
+
+### Installasjon
+
+1. Klon repositoriet
 ```bash
-📦 packet-tracer-guide
- ┣ 📂 public        # CSS, bilder og video
- ┃ ┣ 📂 images      # Skjermbilder og illustrasjoner
- ┃ ┣ 📂 videos      # Opplæringsvideoer
- ┃ ┗ 📜 styles.css  # CSS-filer
- ┣ 📂 views         # EJS-malene
- ┃ ┣ 📜 index.ejs   # Hovedsiden
- ┃ ┣ 📜 guide.ejs   # Selve guiden
- ┃ ┣ 📜 glossary.ejs # Ordlisten
- ┃ ┗ 📜 iot.ejs     # IoT-nettverk guide
- ┣ 📜 app.js        # Express-server
- ┣ 📜 package.json  # NPM-pakker
- ┣ 📜 README.md     # Dokumentasjon
- ┗ 📜 .gitignore    # Ignorerer unødvendige filer
+git clone https://github.com/dittbrukernavn/packet-tracer-guide.git
+cd packet-tracer-guide
+```
+
+2. Installer avhengigheter
+```bash
+npm install
+```
+
+3. Opprett en .env fil i rotkatalogen (valgfritt)
+```bash
+MONGODB_URI=mongodb://localhost:27017/packet-tracer-guide
+PORT=3000
+```
+
+4. Bygg CSS
+```bash
+npm run build:css
+```
+
+5. Start serveren
+```bash
+npm run dev
+```
+
+Besøk `http://localhost:3000` i nettleseren din for å se nettsiden.
+
+## 🛠 Teknologier
+
+- **Frontend**
+  - EJS (Embedded JavaScript templates)
+  - Tailwind CSS
+  - JavaScript
+
+- **Backend**
+  - Node.js
+  - Express.js
+  - MongoDB
+
+## 📁 Prosjektstruktur
+
+```
+packet-tracer-guide/
+├── public/
+│   ├── images/
+│   ├── js/
+│   ├── videos/
+│   ├── styles.css
+│   └── output.css
+├── src/
+│   ├── config/
+│   ├── controllers/
+│   └── routes/
+├── views/
+│   ├── pages/
+│   └── partials/
+├── app.js
+├── tailwind.config.js
+└── package.json
+```
+
+## 🎯 Funksjoner
+
+- **Responsivt Design**: Fungerer på alle enheter
+- **Steg-for-steg Guider**: Detaljerte instruksjoner med bilder
+- **Videodemonstrasjon**: Praktiske eksempler på nettverkskonfigurasjon
+- **Interaktiv Navigasjon**: Enkel tilgang til alle seksjoner
+- **Mobilvennlig Meny**: Hamburger-meny for mobile enheter
+
+## 💻 Utvikling
+
+For å jobbe med prosjektet:
+
+```bash
+# Start utviklingsserver med hot-reload
+npm run dev
+
+# Bygg CSS med Tailwind
+npm run build:css
+
+# Watch for CSS changes
+npm run watch:css
+```
+
+## 📝 Lisens
+
+Dette prosjektet er lisensiert under ISC License.
+
+## ✍️ Forfatter
+
+- August
+
+## 🤝 Bidra
+
+1. Fork prosjektet
+2. Opprett en feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit endringene dine (`git commit -m 'Add some AmazingFeature'`)
+4. Push til branchen (`git push origin feature/AmazingFeature`)
+5. Åpne en Pull Request
+
+## 🙏 Anerkjennelser
+
+- Tailwind CSS for styling
+- Cisco Packet Tracer for nettverkssimulering
+- Node.js og Express.js community
