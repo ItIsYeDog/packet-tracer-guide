@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfigurere en DHCP-server - Cisco Packet Tracer Guide</title>
+    <link href="/output.css" rel="stylesheet">
+    <script src="/js/main.js" defer></script>
+    <script src="/js/imageModal.js" defer></script>
+</head>
+<body class="bg-gray-100 font-sans antialiased">
+    <%- include('../partials/header') %>
+
+    <main class="container mx-auto px-4 py-12">
+        <section class="mb-12">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-4">
+                Konfigurere en DHCP-server i Cisco Packet Tracer
+            </h1>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                Denne guiden viser deg hvordan du setter opp en DHCP-server i Cisco Packet Tracer for å automatisk tildele IP-adresser til enheter i nettverket ditt.
+            </p>
+        </section>
+
+        <section class="mb-12" data-step="1">   
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 1: Legg til en Server
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Dra en server fra "End Devices" -kategorien til arbeidsområdet. Denne serveren vil fungere som DHCP-serveren vår.
+                </p>
+                <img src="/images/add-server.png" alt="Legg til en Server" class="rounded-xl shadow-md mb-6">
+                <p class="text-sm text-gray-500 italic text-center">
+                    Legg til en server i arbeidsområdet.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12" data-step="2">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 2: Koble Serveren til Nettverket
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Bruk "Copper Straight-Through" -kabelen for å koble DHCP-serveren til switchen i LAN-et ditt.
+                </p>
+                <img src="/images/connect-server.png" alt="Koble Serveren til Nettverket" class="rounded-xl shadow-md mb-6">
+                <p class="text-sm text-gray-500 italic text-center">
+                    Koble DHCP-serveren til switchen.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12" data-step="3">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 3: Konfigurer IP-adresse for Serveren
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Klikk på DHCP-serveren, gå til "Desktop" -fanen, og velg "IP Configuration". Angi en statisk IP-adresse, subnet mask og gateway for serveren. Sørg for at IP-adressen er i samme subnet som de andre enhetene i LAN-et. For eksempel:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 leading-relaxed mb-6">
+                    <li>IP-adresse: 192.168.1.254, Subnet Mask: 255.255.255.0, Gateway: 192.168.1.1</li>
+                </ul>
+                <div class="relative w-full aspect-video rounded-xl shadow-md mb-6 overflow-hidden">
+                    <video 
+                        class="absolute top-0 left-0 w-full h-full object-cover" 
+                        controls
+                        playsinline
+                        preload="metadata"
+                        poster="/images/connect-server.png"
+                    >
+                        <source src="/videos/configure-dns.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p class="text-sm text-gray-500 italic text-center">
+                    Konfigurer IP-adressen for DHCP-serveren.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12" data-step="4">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 4: Konfigurer DHCP-tjenesten
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Klikk på DHCP-serveren, gå til "Services" -fanen, og velg "DHCP". Konfigurer DHCP-tjenesten med følgende innstillinger:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 leading-relaxed mb-6">
+                    <li>Service: On</li>
+                    <li>Pool Name: LAN_Pool</li>
+                    <li>Gateway (Default Gateway): 192.168.1.1</li>
+                    <li>Start IP Address: 192.168.1.10</li>
+                    <li>Maximum number of users: 254</li>
+                    <li>DNS Server: 192.168.1.254 (eller IP-adressen til DNS-serveren din)</li>
+                </ul>
+                <img src="/images/configure-dhcp-service.png" alt="Konfigurer DHCP-tjenesten" class="rounded-xl shadow-md mb-6">
+                <p class="text-sm text-gray-500 italic text-center">
+                    Konfigurer DHCP-tjenesten på serveren.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12" data-step="5">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 5: Konfigurer Klienter til å bruke DHCP
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    På hver PC som skal bruke DHCP, gå til "Desktop" -fanen, velg "IP Configuration", og velg "DHCP". PC-en vil automatisk motta en IP-adresse fra DHCP-serveren.
+                </p>
+                <img src="/images/configure-dhcp-clients.png" alt="Konfigurer Klienter til å bruke DHCP" class="rounded-xl shadow-md mb-6">
+                <p class="text-sm text-gray-500 italic text-center">
+                    Konfigurer klientene til å bruke DHCP.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12" data-step="6">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 6: Test DHCP-tilkoblingen
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Etter at PC-en har mottatt en IP-adresse fra DHCP-serveren, kan du teste tilkoblingen ved å åpne "Command Prompt" og bruke "ping" -kommandoen for å pinge andre enheter i nettverket.
+                </p>
+                <img src="/images/test-dhcp-connection.png" alt="Test DHCP-tilkoblingen" class="rounded-xl shadow-md mb-6">
+                <p class="text-sm text-gray-500 italic text-center">
+                    Test DHCP-tilkoblingen fra PC-ene.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Konklusjon
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Gratulerer! Du har nå satt opp en DHCP-server i Cisco Packet Tracer. Dette lar deg automatisk tildele IP-adresser til enheter i nettverket ditt.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <%- include('../partials/footer') %>
+    <%- include('../partials/progress-tracker') %>
+    <script src="/js/progressTracker.js"></script>
+</body>
+</html>

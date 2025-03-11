@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#progressTracker {
+    z-index: 50;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease;
+}
+
+#stepTitle {
+    transition: opacity 0.2s ease-in-out;
+}
+
+.guide-image {
+    @apply rounded-xl shadow-md mb-6;
+    cursor: zoom-in;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.guide-image:hover {
+    opacity: 0.9;
+}
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: none;
+    place-items: center;
+    z-index: 100;
+}
+
+.modal-backdrop.active {
+    display: grid;
+}
+
+.modal-image {
+    max-height: 90vh;
+    max-width: 90vw;
+    object-fit: contain;
+    border-radius: 0.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.animate-zoom-in {
+    animation: zoomIn 0.2s ease-out;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+img:not(.no-zoom) {
+    cursor: zoom-in;
+}
+
+.modal-backdrop img {
+    cursor: zoom-out;
+}
+
+@media (max-width: 640px) {
+    .modal-image {
+        max-width: 95vw;
+        max-height: 95vh;
+    }
+    
+    #progressTracker {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+.backdrop-blur {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.smooth-transition {
+    transition: all 0.3s ease;
+}

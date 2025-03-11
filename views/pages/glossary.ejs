@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordliste - Cisco Packet Tracer Guide</title>
+    <link href="/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+    <%- include('../partials/header') %>
+
+    <main class="container mx-auto px-4 py-12">
+        <section class="mb-8">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-4">
+                Nettverksbegreper og Terminologi
+            </h1>
+            <p class="text-gray-700 text-lg leading-relaxed max-w-3xl">
+                En omfattende ordliste over nettverksbegreper og teknologier som brukes i Cisco Packet Tracer. 
+                Her finner du detaljerte forklaringer på alt fra grunnleggende konsepter til avanserte nettverksteknologier.
+            </p>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-700 mb-6">Grunnleggende Begreper</h2>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden divide-y divide-gray-100">
+                <div class="p-6 hover:bg-gray-50 transition-colors">
+                    <dt class="text-xl font-semibold text-gray-900 flex items-center">
+                        <svg class="w-6 h-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                        </svg>
+                        LAN (Local Area Network)
+                    </dt>
+                    <dd class="mt-3 text-gray-700 space-y-3">
+                        <p>Et lokalt nettverk som kobler sammen enheter i et begrenset geografisk område.</p>
+                        <div class="mt-4 bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-900">Kjennetegn:</h4>
+                            <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                                <li>Høy datahastighet</li>
+                                <li>Begrenset geografisk område</li>
+                                <li>Privat administrasjon</li>
+                                <li>Delt tilgang til ressurser</li>
+                            </ul>
+                        </div>
+                    </dd>
+                </div>
+
+                <div class="p-6 hover:bg-gray-50 transition-colors">
+                    <dt class="text-xl font-semibold text-gray-900 flex items-center">
+                        <svg class="w-6 h-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                        </svg>
+                        DNS (Domain Name System)
+                    </dt>
+                    <dd class="mt-3 text-gray-700 space-y-3">
+                        <p>Internetts "telefonkatalog" som oversetter domenenavn til IP-adresser.</p>
+                        <div class="mt-4 bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-900">Nøkkelfunksjoner:</h4>
+                            <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                                <li>Navneoppløsning (eks: www.example.com → 192.168.1.1)</li>
+                                <li>Hierarkisk struktur</li>
+                                <li>Distribuert database</li>
+                                <li>Caching for bedre ytelse</li>
+                            </ul>
+                        </div>
+                    </dd>
+                </div>
+
+                <div class="p-6 hover:bg-gray-50 transition-colors">
+                    <dt class="text-xl font-semibold text-gray-900 flex items-center">
+                        <svg class="w-6 h-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                        </svg>
+                        DHCP (Dynamic Host Configuration Protocol)
+                    </dt>
+                    <dd class="mt-3 text-gray-700 space-y-3">
+                        <p>En nettverksprotokoll som automatiserer prosessen med å tildele IP-adresser og andre nettverksinnstillinger til enheter.</p>
+                        <div class="mt-4 bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-900">DHCP-prosessen:</h4>
+                            <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                                <li>DHCP Discover: Klient søker etter DHCP-server</li>
+                                <li>DHCP Offer: Server tilbyr IP-konfigurasjon</li>
+                                <li>DHCP Request: Klient aksepterer tilbudet</li>
+                                <li>DHCP Acknowledge: Server bekrefter tildelingen</li>
+                            </ul>
+                        </div>
+                    </dd>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-700 mb-6">Nettverksenheter og Komponenter</h2>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden divide-y divide-gray-100">
+                <div class="p-6 hover:bg-gray-50 transition-colors">
+                    <dt class="text-xl font-semibold text-gray-900 flex items-center">
+                        <svg class="w-6 h-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                        </svg>
+                        Router
+                    </dt>
+                    <dd class="mt-3 text-gray-700 space-y-3">
+                        <p>En nettverksenhet som forbinder ulike nettverk og styrer datatrafikken mellom dem.</p>
+                        <div class="mt-4 bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-900">Hovedfunksjoner:</h4>
+                            <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                                <li>Ruting av datapakker mellom nettverk</li>
+                                <li>NAT (Network Address Translation)</li>
+                                <li>Brannmurfunksjonalitet</li>
+                                <li>QoS (Quality of Service)</li>
+                            </ul>
+                        </div>
+                    </dd>
+                </div>
+
+                <div class="p-6 hover:bg-gray-50 transition-colors">
+                    <dt class="text-xl font-semibold text-gray-900 flex items-center">
+                        <svg class="w-6 h-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+                        </svg>
+                        Switch
+                    </dt>
+                    <dd class="mt-3 text-gray-700 space-y-3">
+                        <p>En nettverksenhet som kobler sammen enheter i et lokalt nettverk og håndterer datatrafikk mellom dem.</p>
+                        <div class="mt-4 bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-900">Egenskaper:</h4>
+                            <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                                <li>MAC-adresselæring</li>
+                                <li>VLAN-støtte</li>
+                                <li>Port-sikkerhet</li>
+                                <li>Spanning Tree Protocol</li>
+                            </ul>
+                        </div>
+                    </dd>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-700 mb-6">Avanserte Konsepter</h2>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden divide-y divide-gray-100">
+                <div class="p-6 hover:bg-gray-50 transition-colors">
+                    <dt class="text-xl font-semibold text-gray-900 flex items-center">
+                        <svg class="w-6 h-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                        </svg>
+                        VLAN (Virtual LAN)
+                    </dt>
+                    <dd class="mt-3 text-gray-700 space-y-3">
+                        <p>En logisk gruppering av nettverksenheter som kan kommunisere som om de var koblet til samme fysiske nettverk.</p>
+                        <div class="mt-4 bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-900">Fordeler:</h4>
+                            <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                                <li>Økt sikkerhet</li>
+                                <li>Bedre ytelse</li>
+                                <li>Enklere administrasjon</li>
+                                <li>Redusert kringkasting</li>
+                            </ul>
+                        </div>
+                    </dd>
+                </div>
+
+                <div class="p-6 hover:bg-gray-50 transition-colors">
+                    <dt class="text-xl font-semibold text-gray-900 flex items-center">
+                        <svg class="w-6 h-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                        </svg>
+                        IoT (Internet of Things)
+                    </dt>
+                    <dd class="mt-3 text-gray-700 space-y-3">
+                        <p>Et nettverk av fysiske enheter med innebygd elektronikk som muliggjør innsamling og utveksling av data.</p>
+                        <div class="mt-4 bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-900">Vanlige IoT-enheter:</h4>
+                            <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                                <li>Smarte termostater</li>
+                                <li>Sikkerhetskameraer</li>
+                                <li>Sensorer</li>
+                                <li>Smarte lyspærer</li>
+                            </ul>
+                        </div>
+                    </dd>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>

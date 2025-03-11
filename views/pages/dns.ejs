@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfigurere en DNS-server - Cisco Packet Tracer Guide</title>
+    <link href="/output.css" rel="stylesheet">
+    <script src="/js/main.js" defer></script>
+    <script src="/js/imageModal.js" defer></script>
+</head>
+<body class="bg-gray-100 font-sans antialiased">
+    <%- include('../partials/header') %>
+
+    <main class="container mx-auto px-4 py-12">
+        <section class="mb-12">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-4">
+                Konfigurere en DNS-server i Cisco Packet Tracer
+            </h1>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                Denne guiden viser deg hvordan du setter opp en DNS-server i Cisco Packet Tracer for å oversette domenenavn til IP-adresser.
+            </p>
+        </section>
+
+        <section class="mb-12" data-step="1">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 1: Legg til en Server
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Dra en server fra "End Devices" -kategorien til arbeidsområdet.
+                </p>
+                <img src="/images/add-server.png" alt="Legg til en Server" class="rounded-xl shadow-md mb-6">
+                <p class="text-sm text-gray-500 italic text-center">
+                    Legg til en server i arbeidsområdet.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12" data-step="2">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 2: Koble Serveren til Nettverket
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Bruk "Copper Straight-Through" -kabelen for å koble serveren til switchen i LAN-et ditt.
+                </p>
+                <img src="/images/connect-server.png" alt="Koble Serveren til Nettverket" class="rounded-xl shadow-md mb-6">
+                <p class="text-sm text-gray-500 italic text-center">
+                    Koble serveren til switchen.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12" data-step="3">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 3: Konfigurer IP-adresse for Serveren
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Klikk på serveren, gå til "Desktop" -fanen, og velg "IP Configuration". Angi en statisk IP-adresse, subnet mask og gateway for serveren. Sørg for at IP-adressen er i samme subnet som de andre enhetene i LAN-et. For eksempel:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 leading-relaxed mb-6">
+                    <li>IP-adresse: 192.168.1.254, Subnet Mask: 255.255.255.0, Gateway: 192.168.1.1</li>
+                </ul>
+                <div class="relative w-full aspect-video rounded-xl shadow-md mb-6 overflow-hidden">
+                    <video 
+                        class="absolute top-0 left-0 w-full h-full object-cover" 
+                        controls
+                        playsinline
+                        preload="metadata"
+                        poster="/images/connect-server.png"
+                    >
+                        <source src="/videos/configure-dns.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p class="text-sm text-gray-500 italic text-center">
+                    Konfigurer IP-adressen for serveren.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12" data-step="4">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 4: Konfigurer DNS-tjenesten
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Klikk på serveren, gå til "Services" -fanen, og velg "DNS". Slå på DNS-tjenesten og legg til DNS-poster for de domenenavnene du vil oversette til IP-adresser. For eksempel:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 leading-relaxed mb-6">
+                    <li>Name: www.example.com, Type: A, Address: 192.168.1.10</li>
+                    <li>Name: mail.example.com, Type: A, Address: 192.168.1.20</li>
+                </ul>
+                <img src="/images/configure-dns-service.png" alt="Konfigurer DNS-tjenesten" class="rounded-xl shadow-md mb-6">
+                <p class="text-sm text-gray-500 italic text-center">
+                    Konfigurer DNS-tjenesten på serveren.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12" data-step="5">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 5: Konfigurer DNS-klienter
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    På hver PC, gå til "Desktop" -fanen, velg "IP Configuration", og angi IP-adressen til DNS-serveren i "DNS Server" -feltet.
+                </p>
+                <img src="/images/configure-dns-clients.png" alt="Konfigurer DNS-klienter" class="rounded-xl shadow-md mb-6">
+                <p class="text-sm text-gray-500 italic text-center">
+                    Konfigurer DNS-klientene til å bruke DNS-serveren.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12" data-step="6">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 6: Legg til en Web Server
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Dra en server fra "End Devices" -kategorien til arbeidsområdet. Konfigurer IP-adressen til å matche IP-adressen i DNS-posten (f.eks. 192.168.1.10 for www.example.com). Gå til "Services" -fanen og aktiver HTTP-tjenesten.
+                </p>
+                <img src="/images/add-web-server.png" alt="Legg til en Web Server" class="rounded-xl shadow-md mb-6">
+                <p class="text-sm text-gray-500 italic text-center">
+                    Legg til en webserver i arbeidsområdet og konfigurer den.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12" data-step="7">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 7: Test DNS-oppløsning
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Åpne nettleseren på hver PC og skriv inn <code>www.example.com</code> i adressefeltet. Hvis DNS-oppløsningen fungerer som den skal og webserveren er konfigurert riktig, vil du se en standard Cisco Packet Tracer-side fra webserveren.
+                </p>
+                <img src="/images/test-dns-resolution-browser.png" alt="Test DNS-oppløsning" class="rounded-xl shadow-md mb-6">
+                <p class="text-sm text-gray-500 italic text-center">
+                    Test DNS-oppløsningen fra PC-ene ved hjelp av nettleseren.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Konklusjon
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Gratulerer! Du har nå satt opp en DNS-server i Cisco Packet Tracer. Dette lar deg oversette domenenavn til IP-adresser i nettverket ditt.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <%- include('../partials/footer') %>
+    <%- include('../partials/progress-tracker') %>
+    <script src="/js/progressTracker.js"></script>
+</body>
+</html>

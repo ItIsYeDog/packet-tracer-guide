@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Gjennomgang - Cisco Packet Tracer Guide</title>
+    <link href="/output.css" rel="stylesheet">
+    <script src="/js/main.js" defer></script>
+    <script src="/js/imageModal.js" defer></script>
+</head>
+<body class="bg-gray-100 font-sans antialiased">
+    <%- include('../partials/header') %>
+
+    <main class="container mx-auto px-4 py-12">
+        <section class="mb-12">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-4">
+                Rask gjennomgang av Cisco Packet Tracer
+            </h1>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                Denne siden gir en rask gjennomgang av hvordan Cisco Packet Tracer fungerer, og de viktigste funksjonene.
+            </p>
+        </section>
+
+        <section class="mb-12" data-step="1">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Hva er Cisco Packet Tracer?
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Cisco Packet Tracer er et kraftig nettverkssimuleringsverktøy som lar deg designe, konfigurere og feilsøke nettverk i et virtuelt miljø. Det er ideelt for studenter, lærere og nettverksingeniører som ønsker å eksperimentere med nettverksteknologier uten å investere i fysisk utstyr.
+                </p>
+                <img src="/images/packet-tracer-interface.png" alt="Cisco Packet Tracer Interface" class="rounded-xl shadow-md mb-6">
+                <p class="text-sm text-gray-500 italic text-center">
+                    Cisco Packet Tracer-grensesnittet.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12" data-step="2">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Grunnleggende Funksjoner
+                </h2>
+                <ul class="list-disc list-inside text-gray-700 leading-relaxed mb-6">
+                    <li><strong>Nettverksenheter:</strong> Velg mellom et bredt utvalg av nettverksenheter, inkludert rutere, svitsjer, PC-er, servere, VoIP-telefoner og mer.</li>
+                    <li><strong>Koblinger:</strong> Bruk forskjellige typer kabler for å koble enheter sammen, inkludert kobber, fiber og trådløse tilkoblinger.</li>
+                    <li><strong>Simulering:</strong> Simuler nettverkstrafikk i sanntid for å se hvordan data flyter gjennom nettverket ditt.</li>
+                    <li><strong>Konfigurasjon:</strong> Konfigurer enheter ved hjelp av CLI (Command Line Interface) eller et grafisk brukergrensesnitt.</li>
+                    <li><strong>Feilsøking:</strong> Bruk innebygde feilsøkingsverktøy for å identifisere og løse nettverksproblemer.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-12" data-step="3">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Hvordan bruke Cisco Packet Tracer
+                </h2>
+                <ol class="list-decimal list-inside text-gray-700 leading-relaxed mb-6">
+                    <li><strong>Design nettverket ditt:</strong> Dra og slipp enheter fra verktøylinjen til arbeidsområdet.</li>
+                    <li><strong>Koble enheter sammen:</strong> Bruk kabler for å koble enheter sammen.</li>
+                    <li><strong>Konfigurer enheter:</strong> Klikk på en enhet for å konfigurere den ved hjelp av CLI eller GUI.</li>
+                    <li><strong>Simuler nettverket:</strong> Klikk på "Simulering" -knappen for å starte simuleringen.</li>
+                    <li><strong>Analyser resultatene:</strong> Bruk innebygde verktøy for å analysere nettverkstrafikk og ytelse.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Konklusjon
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Cisco Packet Tracer er et verdifullt verktøy for alle som ønsker å lære om nettverksteknologier. Med sin intuitive grensesnitt og kraftige funksjoner, kan du raskt og enkelt designe, konfigurere og feilsøke nettverk i et virtuelt miljø.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <%- include('../partials/footer') %>
+    <%- include('../partials/progress-tracker') %>
+    <script src="/js/progressTracker.js"></script>
+</body>
+</html>

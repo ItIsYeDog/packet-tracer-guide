@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Nettverksoppsett - Cisco Packet Tracer Guide</title>
+    <link href="/output.css" rel="stylesheet">
+    <script src="/js/main.js" defer></script>
+    <script src="/js/imageModal.js" defer></script>
+</head>
+<body class="bg-gray-100 font-sans antialiased">
+    <%- include('../partials/header') %>
+
+    <main class="container mx-auto px-4 py-12">
+        <section class="mb-12">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-4">
+                Sette opp et IoT Nettverk i Cisco Packet Tracer
+            </h1>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                Denne guiden viser deg hvordan du setter opp et enkelt IoT-nettverk med forskjellige smarte enheter i Cisco Packet Tracer.
+            </p>
+        </section>
+
+        <section class="mb-12" data-step="1">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 1: Legg til en Trådløs Ruter
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Dra en "Home Gateway" fra "Network Devices" -> "Wireless Devices" kategorien til arbeidsområdet. Denne ruteren vil fungere som sentralen i IoT-nettverket ditt.
+                </p>
+                <img src="/images/add-wireless-router.png" alt="Legg til en Trådløs Ruter" class="rounded-xl shadow-md mb-6">
+                <p class="text-sm text-gray-500 italic text-center">
+                    Legg til en Home Gateway i arbeidsområdet.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12" data-step="2">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 2: Legg til IoT Enheter
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Dra forskjellige IoT-enheter fra "End Devices" -> "Home" kategorien til arbeidsområdet. Eksempler inkluderer:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 leading-relaxed mb-6">
+                    <li>Smarte lyspærer</li>
+                    <li>Termostater</li>
+                    <li>Dører</li>
+                    <li>Vinduer</li>
+                    <li>Kameraer</li>
+                </ul>
+                <img src="/images/add-iot-devices.png" alt="Legg til IoT Enheter" class="rounded-xl shadow-md mb-6">
+                <p class="text-sm text-gray-500 italic text-center">
+                    Legg til forskjellige IoT-enheter i arbeidsområdet.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12" data-step="3">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 3: Koble IoT Enheter til Hjemme Gatewayen
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    De fleste IoT-enheter kobles trådløst til Hjemme Gatewayen. Klikk på hver enhet, gå til "Config" -fanen, og velg "Wireless". Sørg for at SSID-en er den samme som SSID-en til Hjemme Gatewayen.
+                </p>
+                <img src="/images/connect-iot-devices.png" alt="Koble IoT Enheter til Hjemme Gatewayen" class="rounded-xl shadow-md mb-6">
+                <p class="text-sm text-gray-500 italic text-center">
+                    Koble IoT-enhetene til Hjemme Gatewayen.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12" data-step="4">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 4: Konfigurer IoT Enheter
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Klikk på hver IoT-enhet, gå til "Desktop" -fanen, og bruk "IoT Monitor" -appen for å konfigurere enheten. Du kan for eksempel endre statusen til en lyspære eller justere temperaturen på en termostat.
+                </p>
+                <img src="/images/configure-iot-devices.png" alt="Konfigurer IoT Enheter" class="rounded-xl shadow-md mb-6">
+                <p class="text-sm text-gray-500 italic text-center">
+                    Konfigurer IoT-enhetene ved hjelp av IoT Monitor.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12" data-step="5">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 5: Test IoT Nettverket
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Bruk "IoT Monitor" -appen på en PC eller smarttelefon som er koblet til samme nettverk for å overvåke og kontrollere IoT-enhetene.
+                </p>
+                <img src="/images/test-iot-network.png" alt="Test IoT Nettverket" class="rounded-xl shadow-md mb-6">
+                <p class="text-sm text-gray-500 italic text-center">
+                    Test IoT-nettverket ved hjelp av IoT Monitor.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Konklusjon
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Gratulerer! Du har nå satt opp et enkelt IoT-nettverk i Cisco Packet Tracer. Du kan utvide dette nettverket med flere enheter og automatiseringer.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <%- include('../partials/footer') %>
+    <%- include('../partials/progress-tracker') %>
+    <script src="/js/progressTracker.js"></script>
+</body>
+</html>

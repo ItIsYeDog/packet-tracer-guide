@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sette opp et enkelt LAN - Cisco Packet Tracer Guide</title>
+    <link href="/output.css" rel="stylesheet">
+    <script src="/js/main.js" defer></script>
+    <script src="/js/imageModal.js" defer></script>
+</head>
+<body class="bg-gray-100 font-sans antialiased">
+    <%- include('../partials/header') %>
+
+    <main class="container mx-auto px-4 py-12">
+        <section class="mb-12">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-4">
+                Sette opp et enkelt LAN i Cisco Packet Tracer
+            </h1>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                Denne guiden viser deg hvordan du setter opp et enkelt lokalt nettverk (LAN) med minst tre maskiner i Cisco Packet Tracer.
+            </p>
+        </section>
+
+        <section class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Rask gjennomgang av Cisco Packet Tracer
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Cisco Packet Tracer er et kraftig nettverkssimuleringsverktøy som lar deg designe, konfigurere og feilsøke nettverk i et virtuelt miljø. Det er ideelt for studenter, lærere og nettverksingeniører som ønsker å eksperimentere med nettverksteknologier uten å investere i fysisk utstyr.
+                </p>
+                <h3 class="text-2xl font-semibold text-blue-700 mb-4">
+                    Grunnleggende funksjoner:
+                </h3>
+                <ul class="list-disc list-inside text-gray-700 leading-relaxed mb-6">
+                    <li><strong>Nettverksenheter:</strong> Rutere, svitsjer, PC-er, servere, VoIP-telefoner, etc.</li>
+                    <li><strong>Koblinger:</strong> Ulike typer kabler for å koble enheter sammen.</li>
+                    <li><strong>Simulering:</strong> Sanntidssimulering av nettverkstrafikk.</li>
+                    <li><strong>Konfigurasjon:</strong> CLI (Command Line Interface) for å konfigurere enheter.</li>
+                </ul>
+                <img src="/images/packet-tracer-interface.png" alt="Cisco Packet Tracer Interface" class="rounded-xl shadow-md mb-6">
+                <p class="text-sm text-gray-500 italic text-center">
+                    Bilde av Cisco Packet Tracer-grensesnittet.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12" data-step="1">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 1: Legg til PC-er
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Dra tre PC-er fra "End Devices" -kategorien til arbeidsområdet.
+                </p>
+                <img src="/images/add-pcs.png" alt="Legg til PC-er" class="rounded-xl shadow-md mb-6">
+                <p class="text-sm text-gray-500 italic text-center">
+                    Legg til tre PC-er i arbeidsområdet.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12" data-step="2">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 2: Legg til en Switch
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Dra en switch fra "Network Devices" - > "Switches" -kategorien til arbeidsområdet. Plasser den sentralt i forhold til PC-ene.
+                </p>
+                <img src="/images/add-switch.png" alt="Legg til en Switch" class="rounded-xl shadow-md mb-6">
+                <p class="text-sm text-gray-500 italic text-center">
+                    Legg til en switch i arbeidsområdet.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12" data-step="3">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 3: Koble PC-ene til Switchen
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Bruk "Copper Straight-Through" -kabelen (tilgjengelig under "Connections") for å koble hver PC til switchen. Klikk på en PC, velg kabelen, klikk på switchen, og velg en ledig port. Gjenta for alle PC-ene.
+                </p>
+                <img src="/images/connect-pcs.png" alt="Koble PC-ene til Switchen" class="rounded-xl shadow-md mb-6">
+                <p class="text-sm text-gray-500 italic text-center">
+                    Koble PC-ene til switchen med kabler.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12" data-step="4">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 4: Konfigurer IP-adresser
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Klikk på hver PC, gå til "Desktop" -fanen, og velg "IP Configuration". Angi en statisk IP-adresse, subnet mask og gateway for hver PC. Sørg for at IP-adressene er i samme subnet. For eksempel:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 leading-relaxed mb-6">
+                    <li>PC1: IP-adresse: 192.168.1.1, Subnet Mask: 255.255.255.0, Gateway: 192.168.1.254</li>
+                    <li>PC2: IP-adresse: 192.168.1.2, Subnet Mask: 255.255.255.0, Gateway: 192.168.1.254</li>
+                    <li>PC3: IP-adresse: 192.168.1.3, Subnet Mask: 255.255.255.0, Gateway: 192.168.1.254</li>
+                </ul>
+                <div class="relative w-full aspect-video rounded-xl shadow-md mb-6 overflow-hidden">
+                    <video 
+                        class="absolute top-0 left-0 w-full h-full object-cover" 
+                        controls
+                        playsinline
+                        preload="metadata"
+                        poster="/images/packet-tracer-interface.png"
+                    >
+                        <source src="/videos/configure-ip.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p class="text-sm text-gray-500 italic text-center">
+                    Video som viser hvordan du konfigurerer IP-adressene for hver PC.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12" data-step="5">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Trinn 5: Test tilkoblingen
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Åpne "Command Prompt" på hver PC og bruk "ping" -kommandoen for å teste tilkoblingen til de andre PC-ene. For eksempel, fra PC1, skriv <code>ping 192.168.1.2</code> for å teste tilkoblingen til PC2.
+                </p>
+                <img src="/images/test-connection.png" alt="Test tilkoblingen" class="rounded-xl shadow-md mb-6">
+                <p class="text-sm text-gray-500 italic text-center">
+                    Test tilkoblingen mellom PC-ene.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                    Konklusjon
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Gratulerer! Du har nå satt opp et enkelt LAN med tre maskiner i Cisco Packet Tracer. Dette er et grunnleggende eksempel, og du kan utvide nettverket med flere enheter og tjenester.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <%- include('../partials/footer') %>
+    <%- include('../partials/progress-tracker') %>
+    <script src="/js/progressTracker.js"></script>
+</body>
+</html>

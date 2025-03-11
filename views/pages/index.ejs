@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cisco Packet Tracer Guide</title>
+    <link href="/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+    <%- include('../partials/header') %>
+
+    <main class="container mx-auto px-4 py-12">
+        <section class="text-center mb-16">
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+                Lær Cisco Packet Tracer
+                <span class="block text-blue-600">Steg for Steg</span>
+            </h1>
+            <p class="text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto">
+                Din komplette guide til nettverkssimulering og konfigurasjon. Start reisen din mot å bli en nettverksekspert i dag.
+            </p>
+        </section>
+
+        <section class="mb-16">
+            <div class="bg-gradient-to-r from-blue-500 to-blue-700 rounded-2xl shadow-xl p-8 text-white">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="mb-6 md:mb-0">
+                        <h2 class="text-3xl font-bold mb-4">Start Her</h2>
+                        <p class="text-lg opacity-90 max-w-xl">
+                            Ny til Cisco Packet Tracer? Begynn med vår grunnleggende gjennomgang av programmet.
+                        </p>
+                    </div>
+                    <a href="/program-gjennomgang" class="inline-flex items-center bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200">
+                        Program Gjennomgang
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Velg Din Guide</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <a href="/lan" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                            </svg>
+                            <h3 class="text-xl font-semibold text-gray-900 ml-3">LAN Oppsett</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Lag et grunnleggende lokalt nettverk med minst tre maskiner. Perfekt for nybegynnere.
+                        </p>
+                        <span class="inline-flex items-center text-blue-600 font-medium group-hover:text-blue-700">
+                            Start Guide
+                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+
+                <a href="/dns" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                            </svg>
+                            <h3 class="text-xl font-semibold text-gray-900 ml-3">DNS Server</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Lær å sette opp en DNS-server for å oversette domenenavn til IP-adresser.
+                        </p>
+                        <span class="inline-flex items-center text-blue-600 font-medium group-hover:text-blue-700">
+                            Start Guide
+                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+
+                <a href="/dhcp" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                            </svg>
+                            <h3 class="text-xl font-semibold text-gray-900 ml-3">DHCP Server</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Automatiser IP-adresse tildelingen i nettverket ditt med en DHCP-server.
+                        </p>
+                        <span class="inline-flex items-center text-blue-600 font-medium group-hover:text-blue-700">
+                            Start Guide
+                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+
+                <a href="/iot" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                            </svg>
+                            <h3 class="text-xl font-semibold text-gray-900 ml-3">IoT Nettverk</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Utforsk fremtiden med IoT-enheter og smart-teknologi i ditt nettverk.
+                        </p>
+                        <span class="inline-flex items-center text-blue-600 font-medium group-hover:text-blue-700">
+                            Start Guide
+                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Ressurser</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <a href="/glossary" class="group bg-gray-50 rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-all duration-300 border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                            <h3 class="text-xl font-semibold text-gray-900 ml-3">Ordliste</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            Finn forklaringer på alle tekniske begreper og konsepter brukt i guidene.
+                        </p>
+                    </div>
+                </a>
+                <a href="/about" class="group bg-gray-50 rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-all duration-300 border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                            <h3 class="text-xl font-semibold text-gray-900 ml-3">Om Prosjektet</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            Se hvem som står bak denne guiden og hvorfor jeg lagde den.
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>

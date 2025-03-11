@@ -1,0 +1,42 @@
+<div class="fixed w-full bg-white shadow-lg transform transition-transform duration-300" id="progressTracker">
+    <div class="container mx-auto px-4 py-3">
+        <% if (currentStep && totalSteps) { %>
+            <div class="flex items-center justify-between mb-2">
+                <span class="text-sm font-semibold text-gray-700" id="currentStep">Trinn <%= currentStep %> av <%= totalSteps %></span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-blue-600 h-2 rounded-full transition-all duration-300" id="progressBar" style="width: <%= (currentStep / totalSteps) * 100 %>%"></div>
+            </div>
+            <div class="mt-4 flex items-center justify-between">
+                <h3 class="text-sm font-medium text-gray-700" id="stepTitle"></h3>
+            </div>
+        <% } %>
+
+        <!-- Navigation buttons -->
+        <div class="flex justify-end gap-2 <%= currentStep ? 'mt-4' : '' %>">
+            <% if (prevGuide) { %>
+                <a href="<%= prevGuide.url %>" 
+                   class="group flex items-center bg-white px-3 py-1.5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200">
+                    <svg class="w-4 h-4 mr-1 text-gray-600 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                    <span class="text-sm font-medium text-gray-700 group-hover:text-blue-600">
+                        <%= prevGuide.title %>
+                    </span>
+                </a>
+            <% } %>
+            
+            <% if (nextGuide) { %>
+                <a href="<%= nextGuide.url %>" 
+                   class="group flex items-center bg-blue-600 px-3 py-1.5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                    <span class="text-sm font-medium text-white">
+                        <%= nextGuide.title %>
+                    </span>
+                    <svg class="w-4 h-4 ml-1 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            <% } %>
+        </div>
+    </div>
+</div>
